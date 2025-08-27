@@ -14,7 +14,7 @@ import { Text } from "@/components/ui/text";
 import { Icon, CloseIcon } from "@/components/ui/icon";
 import React from "react";
 import SelectComponent from "./Select";
-import { Input, InputField } from "./ui/input";
+import { Textarea, TextareaInput } from "./ui/textarea";
 
 type ModalCustomProps = {
   showModal: boolean;
@@ -52,7 +52,7 @@ export default function ModalCustom({
           </ModalHeader>
 
           <ModalBody className="py-4">
-            <Text size="sm" className="text-typography-500 py-2">
+            <Text size="sm" className="text-typography-500">
               Elevate user interactions with our versatile modals. Seamlessly
               integrate notifications, forms, and media displays. Make an impact
               effortlessly.
@@ -60,9 +60,15 @@ export default function ModalCustom({
 
             <SelectComponent />
 
-            <Input className="my-4 rounded-full">
-              <InputField placeholder="Type email addresses" />
-            </Input>
+            <Textarea
+              size="md"
+              isReadOnly={false}
+              isInvalid={false}
+              isDisabled={false}
+              className="rounded-md"
+            >
+              <TextareaInput placeholder="Your text goes here..." />
+            </Textarea>
           </ModalBody>
 
           <ModalFooter>

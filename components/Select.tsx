@@ -24,7 +24,7 @@ export default function SelectComponent() {
   return (
     <Select>
       <SelectTrigger
-        className="rounded-full"
+        className="rounded-full my-4"
         style={{ justifyContent: "space-between" }}
         variant="outline"
         size="md"
